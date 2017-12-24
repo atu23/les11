@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Oracle</title>
+  
+  <script>
+    var ar = [
+    'Совершенно точно',
+    'Определенно',
+    'Несомненно',
+    'Да',
+    'Можно на это смело рассчитывать',
+    'Как мне кажется, да',
+    'Скорее всего',
+    'Прогноз положительный',
+    'По всем признакам - да',
+    'Ответ как-то мутно выглядит, попробуй еще',
+    'Попробуй позже',
+    'Тебе сейчас лучше об этом не знать',
+    'Невозможно сейчас сказать что-то определенное',
+    'Сосредоточься и спроси меня опять',
+    'Я бы не стал на это рассчитывать',
+    'Мой ответ - нет',
+    'Мои источники все отрицают',
+    'Прогноз выглядит неутешительно',
+    'Сомнительно',
+    'Не мучай меня своими скучными вопросами, пожалуйста'
+    ]
+
+    var ar_length = ar.length;
+
+    for (var i = 0; i < ar_length; i++) {
+  //console.log(i, ar[i]);
+}
+
+var rand_number = Math.random()*(ar_length-1);
+//console.log('rand_number', rand_number); 
+
+var round = Math.round(rand_number);
+//console.log('result', ar[round]);
+
+
+</script>
+
+</head>
+<body>
+
+ <h1 class="oracle">Задайте вопрос Оракулу!</h1>
+ 
+ <button onclick="myFunction()">Try it</button>
+
+ <p id="demo" text-color=white></p>
+
+ <script>
+  function myFunction() {
+    var txt;
+    var person = prompt("Введите текст вопроса здесь");
+    if (person == null || person == "") {
+      txt = "User cancelled the prompt.";
+    } else {
+      txt = "Вы хотите узнать: " + person + "  Ответ Оракула: " + ar[round];
+    }
+    document.getElementById("demo").innerHTML = txt;
+  }
+</script>
+
+<img src="img/oracle.jpg">
+<br>
+<div>
+  <img src="img/qu1.jpg" align="center" width="50" height="50" onmouseover="myFunction()">
+</div>
+
+</body>
+</html>
