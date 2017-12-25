@@ -1,41 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
- <link rel="stylesheet" type="text/css" href="css/style.css">
+ <link rel="stylesheet" type="text/css" href="/css/style-piano.css">
  <title>Piano</title>
 
  <script>
    function notaDo() {
-    document.getElementById("nota_do").src="img/do.jpg";
-    document.getElementById("nota_re").src="img/re_.jpg";
-    document.getElementById("nota_mi").src="img/mi_.jpg";
+    document.getElementById("nota_do").src="/img/do.jpg";
+    document.getElementById("nota_re").src="/img/re_.jpg";
+    document.getElementById("nota_mi").src="/img/mi_.jpg";
     document.getElementsByClassName("piano")[0].style.backgroundColor="red";
   }
 
   function notaRe() {
-    document.getElementById("nota_do").src="img/do_.jpg"; 
-    document.getElementById("nota_re").src="img/re.jpg"; 
-    document.getElementById("nota_mi").src="img/mi_.jpg";
+    document.getElementById("nota_do").src="/img/do_.jpg"; 
+    document.getElementById("nota_re").src="/img/re.jpg"; 
+    document.getElementById("nota_mi").src="/img/mi_.jpg";
     document.getElementsByClassName("piano")[0].style.backgroundColor="blue";
   }
 
   function notaMi() {
-   document.getElementById("nota_do").src="img/do_.jpg";
-   document.getElementById("nota_re").src="img/re_.jpg";
-   document.getElementById("nota_mi").src="img/mi.jpg";
+   document.getElementById("nota_do").src="/img/do_.jpg";
+   document.getElementById("nota_re").src="/img/re_.jpg";
+   document.getElementById("nota_mi").src="/img/mi.jpg";
    document.getElementsByClassName("piano")[0].style.backgroundColor="green";
  }
-</script>
 
-</head>
-<body class="piano">
- <h1>Пианино</h1>
- <div class="center">
-  <img src="img/do_.jpg" id="nota_do" onclick="notaDo()" class=close ><img src="img/re_.jpg" id="nota_re" onclick="notaRe()" class=close><img src="img/mi_.jpg" id="nota_mi" onclick="notaMi()" class=close>
-</div>
-
-<script>   
-  function myFunc() {
+   function myFunc() {
     var inp = document.getElementById("inp");
     var x = inp.value;
     if (x ==='д'){
@@ -48,8 +39,17 @@
   }
 </script>
 
+</head>
+<body class="piano">
+ <h1>Пианино</h1>
+ <div class="center">
+  <img src="/img/do_.jpg" id="nota_do" onclick="notaDo()" class="close" ><img src="/img/re_.jpg" id="nota_re" onclick="notaRe()" class=close><img src="/img/mi_.jpg" id="nota_mi" onclick="notaMi()" class=close>
+</div>
+
+<div>
 Введите первую букву названия ноты 
 <input type="text" id="inp" onchange="myFunc()"/> 
+</div>
 
 </body>
 </html>
